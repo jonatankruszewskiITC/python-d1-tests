@@ -1,8 +1,10 @@
 from project import find_max
+import pytest
+import pytest_expect
 
 
 def TEST_EX01_001():
-    assert find_max([4, 235, 3, 2]) == 235, "Case: General. not passing"
+    assert find_max([4, 235, 664, 3, 2]) == 664, "Case: General. not passing"
 
 
 def TEST_EX01_002():
@@ -14,10 +16,11 @@ def TEST_EX01_003():
 
 
 def TEST_EX01_004():
-    assert find_max(find_max([]) is None)
+    assert find_max(find_max([]) == None)
 
 
-# TEST_EX01_001()
+TEST_EX01_001()
 TEST_EX01_002()
 TEST_EX01_003()
-TEST_EX01_004()
+# TEST_EX01_004()
+

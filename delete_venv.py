@@ -7,10 +7,10 @@ def delete_folder():
 
     for root, dirs, files in os.walk(location):
         for name in files:
-            if name == 'requirements.txt':
+            if name == '.gitignore':
                 os.remove((os.path.join(root, name)))
         for name in dirs:
-            if name == 'venv':
+            if name == '.idea':
                 shutil.rmtree((os.path.join(root, name)))
 
 
